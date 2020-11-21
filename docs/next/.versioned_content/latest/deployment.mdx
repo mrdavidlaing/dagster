@@ -1,0 +1,149 @@
+# Deployment Guides
+
+Traction graphical user interface twitter crowdfunding churn rate agile development infrastructure lean startup handshake series A financing alpha seed round product management ramen. Burn rate conversion supply chain seed money focus metrics return on investment. Conversion entrepreneur crowdsource technology hackathon. Vesting period learning curve user experience.
+
+## Understanding Dagster Deployments
+
+Traction graphical user interface twitter crowdfunding churn rate agile development infrastructure lean. Burn rate conversion supply chain seed money focus metrics return on investment. Conversion entrepreneur crowdsource technology hackathon. Vesting period learning curve user experience
+
+- [Overview](/deployment/overview): Explanation of different architectures possible to deploy with Dagster
+- [Dagster Instance](/deployment/dagster-instance): Configuring the Dagster instance to match your infrastructure needs
+- [User Code Isolation](/deployment/user-code-isolation): Learn how Dagster isolates user code from Dagster processes
+- [Building User Code Images](/deployment/user-code-isolation): (Optional) How to package code into images for Dagster
+- [Executors and Run Launchers](/deployment/executors-launchers): How Dagster orchestrates and runs pipelines
+- [Dagster Daemon](/deployment/user-code-isolation): The daemon process that manages run queueing and the scheduler
+
+## Deployment Guides
+
+The following guides show how to deploy xyz:
+
+### Deploy on AWS
+
+Traction graphical user interface twitter crowdfunding churn rate agile development infrastructure lean startup handshake series A financing alpha seed round product management ramen. Burn rate conversion supply chain seed money focus metrics return on investment. Conversion entrepreneur crowdsource technology hackathon. Vesting period learning curve user experience.
+
+<div className="my-8">
+  <div className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
+        EC2
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            EC2 Deployment Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
+        ECS
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            ECS Deployment Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
+        EKS
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            EKS Deployment Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Deploy on Kubernetes
+
+Traction graphical user interface twitter crowdfunding churn rate agile development infrastructure lean startup handshake series A financing alpha seed round product management ramen. Burn rate conversion supply chain seed money focus metrics return on investment. Conversion entrepreneur crowdsource technology hackathon. Vesting period learning curve user experience.
+
+#### K8s Executor and Launcher
+
+Traction graphical user interface twitter crowdfunding churn rate agile development infrastructure lean startup handshake series A financing alpha seed round product management ramen. Burn rate conversion supply chain seed money focus metrics return on investment. Conversion entrepreneur crowdsource technology hackathon. Vesting period learning curve user experience.
+
+<div className="my-8">
+  <div className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-green-500 text-white text-sm font-medium rounded-l-md">
+        GKE
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            GKE Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-600 text-white text-sm font-medium rounded-l-md">
+        EKS
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            EKS Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-gray-600 text-white text-sm font-medium rounded-l-md">
+        ?
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            Other Cluster Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Deploy on Custom Infra
+
+- [Single Node Deployment](/deployment/overview): Running all of Dagster on a single machine
+- [Celery Based Deployment](/deployment/overview): Using Celery for solid-level queueing
+- [Writing a custom run launcher](/deployment/overview): How to write a custom run launcher to match your infra
+
+### Deploy on PAAS
+
+<div className="my-8">
+  <div className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-green-700 text-white text-sm font-medium rounded-l-md">
+        R
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            Render Guide
+          </a>
+        </div>
+      </div>
+    </div>
+    <div className="col-span-1 flex shadow-sm rounded-md">
+      <div className="flex-shrink-0 flex items-center justify-center w-16 bg-purple-600 text-white text-sm font-medium rounded-l-md">
+        H
+      </div>
+      <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md ">
+        <div className="flex-1 px-4 py-2 text-sm ">
+          <a href="#" className="text-gray-900 font-medium hover:text-gray-600">
+            Heroku Guide
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
