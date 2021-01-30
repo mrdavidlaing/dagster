@@ -8,7 +8,7 @@ RUN pip install \
       dagster-celery-k8s==${DAGSTER_VERSION} \
       dagster-celery[flower,redis,kubernetes]==${DAGSTER_VERSION} \
 # Cleanup
-    && echo "==> Total size BEFORE cleanup: $(du -sh --exclude=/proc /)" \
-    && echo "Removing: pip cache" && rm -rf /root/.cache  \
-    && echo "Removing: pycache files" &&  find / -regex '^.*\(__pycache__\|\.py[co]\)$' -delete \
-    && echo "==> Total size AFTER cleanup: $(du -sh --exclude=/proc /)"
+    &&  rm -rf /var \
+    &&  rm -rf /root/.cache  \
+    &&  rm -rf /usr/lib/python2.7 \
+    &&  rm -rf /usr/lib/x86_64-linux-gnu/guile
