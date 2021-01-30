@@ -1,17 +1,12 @@
-ARG BASE_IMAGE
-FROM "${BASE_IMAGE}"
-
 ARG DAGSTER_VERSION
+FROM "dagster-base:${DAGSTER_VERSION}"
 
-RUN apt-get update -yqq && \
-    apt-get install -yqq cron
-
+# ==> Dagit layer
+ARG DAGSTER_VERSION
 RUN pip install \
-    dagster==${DAGSTER_VERSION} \
-    dagster-graphql==${DAGSTER_VERSION} \
-    dagster-postgres==${DAGSTER_VERSION} \
-    dagster-celery[flower,redis,kubernetes]==${DAGSTER_VERSION} \
-    dagster-aws==${DAGSTER_VERSION} \
-    dagster-k8s==${DAGSTER_VERSION} \
-    dagster-celery-k8s==${DAGSTER_VERSION} \
-    dagit==${DAGSTER_VERSION}
+      dagit==${DAGSTER_VERSION} \
+# Cleanup
+    &&  rm -rf /var \
+    &&  rm -rf /root/.cache  \
+    &&  rm -rf /usr/lib/python2.7 \
+    &&  rm -rf /usr/lib/x86_64-linux-gnu/guile
