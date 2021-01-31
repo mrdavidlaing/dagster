@@ -6,7 +6,7 @@ ARG DAGSTER_VERSION
 RUN pip install \
       dagster-k8s==${DAGSTER_VERSION} \
 # Cleanup
-    &&  rm -rf /var \
-    &&  rm -rf /root/.cache  \
-    &&  rm -rf /usr/lib/python2.7 \
-    &&  rm -rf /usr/lib/x86_64-linux-gnu/guile
+    && echo "==> Total size BEFORE cleanup: $(du -sh --exclude=/proc /)" \
+    && echo "Removing: pip cache" && rm -rf /root/.cache  \
+    && echo "Removing: pycache files" &&  find / -regex '^.*\(__pycache__\|\.py[co]\)$' -delete \
+    && echo "==> Total size AFTER cleanup: $(du -sh --exclude=/proc /)"
